@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Someapp</title>
+	
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Testapp</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
+<header id="main-navigation" class="clearfix">
+  <a href="#" class="name">Rusty Bikes</a>
+  <nav>
+    <a href="#" >Home</a>
+    <a href="#" >About</a>
+    <a href="#" >Contact</a>
+  </nav>
+</header>
+<div class="container">
+	<div class="wrapper">
+		<%= yield %>
+	</div> <!-- /wrapper -->
+</div> <!-- /contained-fluid -->
 
-<%= yield %>
-
+<footer>
+  <div class="container">
+    <p class="copyright">&copy; 2016 Mariusz Borowiak</p>
+  </div>
+</footer>
 </body>
 </html>
