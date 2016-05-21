@@ -14,8 +14,10 @@
 				<div class="col-xs-12 col-md-6">
 					<p class="description"><strong>Description:</strong>
 				  	<%= @product.description %>
-				  	</p>
-				  	<p>Original color: <%= product.colour %> </p>
+				  	<br><br>
+				  	<strong>Original color: </strong><%= @product.colour %>
+				  	<br><br>
+				  	<strong>Price:</strong> £<%= @product.price %></p>
 				</div>
 				<div class="col-xs-12 bottom-buttons">
 					<%= link_to 'Edit', edit_product_path(@product) , class: 'btn btn-success right-space-2'  %> 
