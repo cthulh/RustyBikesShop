@@ -1,19 +1,25 @@
-<p id="notice"><%= notice %></p>
+<div class="content-wrapper">
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) , class: 'btn btn-success'  %> |
-<%= link_to 'Back', products_path , class: 'btn btn-default'  %>
+	<h1>
+	  <%= @product.name %>
+	</h1>
+	<div class="show-product">
+		<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-md-6">
+				<%= image_tag(@product.image_url, class: "img-responsive img-thumbnail center") %>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<p class="description"><strong>Description:</strong>
+			  	<%= @product.description %>
+			  	</p>
+			</div>
+			<div class="col-xs-12 bottom-buttons">
+				<%= link_to 'Edit', edit_product_path(@product) , class: 'btn btn-success right-space-2'  %> 
+				<%= link_to 'Back', products_path , class: 'btn btn-default right-space-2'  %>
+			</div>
+		</div>
+	</div>
+</div>

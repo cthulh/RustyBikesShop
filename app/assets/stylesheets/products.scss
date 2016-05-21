@@ -2,19 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-table {
-	min-width: 700px;
-	margin: 2em;
-	thread th {
-		padding: 0.2em 2em;
-	}
-}
-
-.form_wrapper {
-	margin: 2em 0 15em 0;
-	width: 25%;
-}
-
 .round-corners {
 	border-radius: 3%;
 }
@@ -26,3 +13,46 @@ table {
 .left-text {
 	text-align: left;
 }
+
+.right-space-2 {
+	margin: 0 2em 0 0;
+}
+
+table {
+	min-width: 700px;
+	margin: 2em;
+	thread th {
+		padding: 0.2em 2em;
+	}
+}
+
+.content-wrapper {
+	max-width: 90%;
+	margin: 0 auto 1em auto;
+	h1 {
+		 text-align: center;
+	}
+}
+
+.bottom-buttons {
+	margin-top: 2em;
+}
+
+.form-wrapper{
+	margin: 2em auto;
+	width: 50%;
+}
+
+.show-product {
+	margin: 2em auto;
+	width: 80%;
+	p.description {
+		font-size: 1.8em;
+		letter-spacing: 0.1em;
+		line-height: 1em;
+	}
+	img {
+		margin: 1em;
+	}
+}
+
