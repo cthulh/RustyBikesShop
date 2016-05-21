@@ -14,24 +14,25 @@
 	text-align: left;
 }
 
-.right-space-2 {
-	margin: 0 2em 0 0;
+.center-text {
+	text-align: center;
 }
 
-table {
-	min-width: 700px;
-	margin: 2em;
-	thread th {
-		padding: 0.2em 2em;
-	}
+.right-space-2 {
+	margin-right: 2em;
+}
+
+mini-space-right {
+	margin-right: 0.3em;
+}
+
+.after-space-2 {
+	margin-bottom: 2em;
 }
 
 .content-wrapper {
 	max-width: 90%;
 	margin: 0 auto 1em auto;
-	h1 {
-		 text-align: center;
-	}
 }
 
 .bottom-buttons {
@@ -50,9 +51,22 @@ table {
 		font-size: 1.8em;
 		letter-spacing: 0.1em;
 		line-height: 1em;
+		margin-top: 1em;
 	}
 	img {
 		margin: 1em;
 	}
 }
+
+.products-wrapper {
+	h1 {
+		margin-bottom: 0.5em;
+	}
+	margin-bottom: 2em;
+}
+
+.product-img {
+	max-height: 200px;
+}
+
 

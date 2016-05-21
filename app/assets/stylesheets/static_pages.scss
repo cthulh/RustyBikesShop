@@ -25,7 +25,7 @@ html, body {
 	border-bottom: 1px solid $border;
 	.name {
 		font-weight: 700;
-		font-size: .8em;
+		font-size: 1em;
 		letter-spacing: 4px;
 		text-transform: uppercase;
 		border: 2px solid $border;
@@ -37,27 +37,12 @@ html, body {
 	nav {
 		float: right;
 		padding-top: 1.25rem;
-		a {
+		a, a:hover, a:active, a:visited {
 			color: $dark_gray;
 			text-decoration: none;
 			margin: 0 1rem;
-			font-size: 1em;
+			font-size: 1.6em;
 		}
-	}
-}
-
-footer {
-	border-top: 1px solid $border;
-	width: 100%;
-	padding: 1em;
-	.copyright {
-		display: block;
-		max-width: 700px;
-		margin: 0 auto;
-		text-align: center;
-		color: $dark_gray;
-		padding: .4em 0;
-		font-size: .8em;
 	}
 }
 
@@ -79,7 +64,6 @@ h1 {
 
 main {
 	h1, h4 {
-		text-align: center;
 		color: $dark_gray;
 	}
 	.front-pic {
@@ -96,6 +80,21 @@ main {
 .info {
 	max-width: 700px;
 	margin: 0 auto;
+}
+
+footer {
+	border-top: 1px solid $border;
+	width: 100%;
+	padding: 1em;
+	.copyright {
+		display: block;
+		max-width: 700px;
+		margin: 0 auto;
+		text-align: center;
+		color: $dark_gray;
+		padding: .4em 0;
+		font-size: 1.2em;
+	}
 }
 
 
