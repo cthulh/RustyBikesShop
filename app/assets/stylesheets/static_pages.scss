@@ -8,6 +8,7 @@ $highlight: #8bc6db;
 
 body {
 	font-family: 'Raleway', sans-serif;
+	position: relative;
 }
 
 * {
@@ -43,7 +44,9 @@ body {
 footer {
 	border-top: 1px solid $border;
 	position: absolute;
-	bottom: 0;
+	height: 4em;
+	left: 0;
+	right: 0;
 	width: 100%;
 	padding: 1em;
 	.copyright {
