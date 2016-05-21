@@ -6,13 +6,17 @@ $light_blue: #7f89e2;
 $border: #E9E9E9;
 $highlight: #8bc6db;
 
-body {
-	font-family: 'Raleway', sans-serif;
-	position: relative;
-}
-
 * {
 	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+html, body {
+	height: 100%;
 }
 
 #main-navigation {
@@ -43,10 +47,6 @@ body {
 
 footer {
 	border-top: 1px solid $border;
-	position: absolute;
-	height: 4em;
-	left: 0;
-	right: 0;
 	width: 100%;
 	padding: 1em;
 	.copyright {
@@ -62,11 +62,19 @@ footer {
 
 .wrapper {
 	margin: 2em 5%;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -4em 0;
+}
+
+footer, .push {
+	height: 4em;
 }
 
 h1 {
 	font-size: 350%;
-	margin: 0;
+	margin: 1em 0 0 0;
 }
 
 main {
@@ -78,11 +86,11 @@ main {
 		max-width: 700px;
 		margin: 2em auto;
 	}
+	.center {
+		display: block;
+		margin: 0 auto;
+	}
 
-}
-
-.main-pic {
-	border-radius: 2%;
 }
 
 .info {

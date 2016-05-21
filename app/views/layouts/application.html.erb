@@ -13,24 +13,21 @@
 
 </head>
 <body>
-<header id="main-navigation" class="clearfix">
-  <a href="#" class="name">Rusty Bikes</a>
-  <nav>
-    <a href="#" >Home</a>
-    <a href="#" >About</a>
-    <a href="#" >Contact</a>
-  </nav>
-</header>
-<div class="container">
-	<div class="wrapper">
-		<%= yield %>
-	</div> <!-- /wrapper -->
-</div> <!-- /contained-fluid -->
+<div class="wrapper">
+  <header id="main-navigation" class="clearfix">
+    <a href="#" class="name">Rusty Bikes</a>
+    <nav>
+      <a href="#" >Home</a>
+      <a href="#" >About</a>
+      <a href="#" >Contact</a>
+    </nav>
+  </header>
 
+		<%= yield %>
+    <div class="push"></div>
+</div> <!-- /wrapper -->
 <footer>
-  <div class="container">
     <p class="copyright">&copy; 2016 Mariusz Borowiak</p>
-  </div>
 </footer>
 </body>
 </html>
