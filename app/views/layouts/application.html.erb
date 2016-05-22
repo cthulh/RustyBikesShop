@@ -15,11 +15,12 @@
 <body>
 <div class="wrapper">
   <header id="main-navigation" class="clearfix">
-    <a href="#" class="name">Rusty Bikes</a>
+    <%= link_to 'Rusty Bikes', static_pages_index_path, class: 'name' %>
     <nav>
-      <a href="#" >Home</a>
-      <a href="#" >About</a>
-      <a href="#" >Contact</a>
+      <%= link_to 'Products', products_path %>
+      <%= link_to 'Home', static_pages_index_path %>
+      <%= link_to 'About', static_pages_about_path %>
+      <%= link_to 'Contact', static_pages_contact_path %>
     </nav>
   </header>
 
