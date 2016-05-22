@@ -1,3 +1,24 @@
-
-<h1>Featured Product:</h1>
-<h4><%= @featured_product.name %></h4>
+<div class="content-wrapper">
+	<h4 class="center-text">Featured Product:</h1>
+	<h1 class="center-text"><%= @featured_product.name %></h4>
+	<div class="show-product">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+					<%= image_tag(@featured_product.image_url, class: "img-responsive img-thumbnail center") %>
+				</div>
+				<div class="col-xs-12 col-md-6">
+					<p class="description"><strong>Description:</strong>
+				  	<%= @featured_product.description %>
+				  	<br><br>
+				  	<strong>Original color: </strong><%= @featured_product.colour %>
+				  	<br><br>
+				  	<strong>Price:</strong> £<%= @featured_product.price %></p>
+				</div>
+				<div class="col-xs-12 bottom-buttons">
+					<%= link_to 'Back', products_path , class: 'btn btn-default right-space-2'  %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
