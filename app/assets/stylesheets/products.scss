@@ -36,7 +36,14 @@ mini-space-right {
 }
 
 .bottom-buttons {
-	margin-top: 2em;
+	margin: 2em 0;
+	a {
+		margin-right: 0.5em;
+	}
+}
+
+.product {
+	margin: 2em 0;
 }
 
 .form-wrapper{
@@ -69,6 +76,9 @@ mini-space-right {
 }
 
 .products-wrapper {
+	.add-product a {
+		margin: 1em 0 0.5em 0;
+	}
 	h1 {
 		margin-bottom: 0.5em;
 	}
@@ -79,4 +89,7 @@ mini-space-right {
 	max-height: 200px;
 }
 
+.textbox600 {
+	max-width: 600px;
+}
 
