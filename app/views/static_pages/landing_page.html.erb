@@ -1,23 +1,27 @@
 <div class="content-wrapper">
-	<h4 class="center-text">Featured Product:</h1>
-	<h1 class="center-text"><%= @featured_product.name %></h4>
+	<h2 class="center-text">Featured Products:</h1>
 	<div class="show-product">
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xs-12 col-md-6">
-					<%= image_tag(@featured_product.image_url, class: "img-responsive img-thumbnail center") %>
-				</div>
-				<div class="col-xs-12 col-md-6">
-					<p class="description"><strong>Description:</strong>
-				  	<%= @featured_product.description %>
-				  	<br><br>
-				  	<strong>Original color: </strong><%= @featured_product.colour %>
-				  	<br><br>
-				  	<strong>Price:</strong> £<%= @featured_product.price %></p>
-				</div>
-				<div class="col-xs-12 bottom-buttons">
-					<%= link_to 'Back', products_path , class: 'btn btn-default right-space-2'  %>
-				</div>
+			<div id="carousel-example-bikes" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			  	<% @featured_products.length.times do |x| %>
+			    <li data-target="#carousel-example-bikes" data-slide-to="<%= "#{x}" %>" class="<%="active" if x==0%>"></li>
+			    <% end %>
+			  </ol>
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner" role="listbox">
+			  	<!-- slide 0 (active)-->
+			  	<% @featured_products.each do |product| %>
+			  	<div class="item <%=" active" if product==@featured_products.first %>">
+			      <%= image_tag(product.image_url, alt: product.name) %>
+			      <div class="carousel-caption">
+			      	<h2><%= product.name %></h2>
+			      </div>
+			    </div>
+			  	<% end %>
+			  </div>
+			  <!-- no controls -->
 			</div>
 		</div>
 	</div>
