@@ -1,0 +1,23 @@
+<div class="container-fluid">
+	<div id="carousel-example-bikes" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators">
+	  	<% @featured_products.length.times do |x| %>
+	    <li data-target="#carousel-example-bikes" data-slide-to="<%= "#{x}" %>" class="<%="active" if x==0%>"></li>
+	    <% end %>
+	  </ol>
+	  <!-- Wrapper for slides -->
+	  <div class="carousel-inner" role="listbox">
+	  	<!-- slide 0 (active)-->
+	  	<% @featured_products.each do |product| %>
+	  	<div class="item <%=" active" if product==@featured_products.first %>">
+	      <%= image_tag(product.image_url, alt: product.name) %>
+	      <div class="carousel-caption">
+	      	<h2><%= product.name %></h2>
+	      </div>
+	    </div>
+	  	<% end %>
+	  </div>
+	  <!-- no controls -->
+	</div>
+</div>
