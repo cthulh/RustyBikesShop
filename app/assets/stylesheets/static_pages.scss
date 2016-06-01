@@ -101,6 +101,18 @@ footer {
 	}
 }
 
+.previous_page {
+	a, a:hover, a:active, a:visited {
+			color: $light_blue;
+			text-decoration: none;
+			font-size: 0.8em;
+			highlight: none;
+			background-color: white;
+			margin-top: 2em;
+			margin-left: 1em;
+	}
+}
+
 
 
 
