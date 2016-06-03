@@ -49,6 +49,27 @@ html, body {
 			highlight: none;
 			background-color: white;
 		}
+		.dropdown {
+			display: inline-block;
+			float: right;
+			
+		}
+
+		button {
+			font-size: 1.6em;
+			padding: 0.2em 0.8em;
+			margin: 0.5em;
+		}
+		.dropdown-menu {
+			a, a:hover, a:active {
+				font-size: 1em;
+				padding: 0;
+			}
+
+			a:hover {
+				color: black;
+			}
+		}
 	}
 }
 

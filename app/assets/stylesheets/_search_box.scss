@@ -7,16 +7,15 @@
         padding: 0.1em 0.2em;
         font-size: 1.5em;
     }
-    .submit {
-        margin: 2px 0 0 0;
+    .nav-button {
+        margin: 0.5em;
         background: none;
         box-shadow: none;
         border: 0;
         color: #666666;
-        padding: 0 8px 0 10px;
         font-size: 1.6em;
     }
-    input[type="submit"]:hover, input[type="submit"]:active {
+    .nav-button:hover, .nav-button:active {
         color: black;
     } 
 }

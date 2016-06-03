@@ -20,16 +20,29 @@
         <div id="search_box" class="form-group">
           <%= form_tag("/products", method: "get") do %>
             <%= text_field_tag :q, nil, class:"text-field" %>
-            <%= button_tag nil, type: "submit", class:"submit" do %>
+            <%= button_tag nil, type: "submit", class:"nav-button" do %>
             <span class="glyphicon glyphicon-search"></span>
             <% end %>
           <% end %>
         </div>
-      <%= link_to 'Home', root_path %>
-      <%= link_to 'Products', products_path %>
-      <%= link_to 'Featured', featured_path %>
-      <%= link_to 'About', static_pages_about_path %>
-      <%= link_to 'Contact', static_pages_contact_path %>
+      <%= link_to 'Home', root_path, class: "hidden-xs" %>
+      <%= link_to 'Products', products_path, class: "hidden-xs" %>
+      <%= link_to 'Featured', featured_path, class: "hidden-xs" %>
+      <%= link_to 'About', static_pages_about_path, class: "hidden-xs" %>
+      <%= link_to 'Contact', static_pages_contact_path, class: "hidden-xs" %>
+      <div class="dropdown visible-xs">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Menu
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'Products', products_path %></li>
+          <li><%= link_to 'Featured', featured_path %></li>
+          <li><%= link_to 'About', static_pages_about_path %></li>
+          <li><%= link_to 'Contact', static_pages_contact_path %></li>
+        </ul>
+      </div>
     </nav>
   </header>
   <% if !current_page?(root_path) %>
