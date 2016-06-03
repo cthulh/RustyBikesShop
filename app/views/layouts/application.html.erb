@@ -17,12 +17,14 @@
   <header id="main-navigation" class="clearfix">
     <%= link_to 'Rusty Bikes', root_path, class: 'name' %>
     <nav>
-      <div id="search_box">
-        <%= form_tag("/products", method: "get", id:"custom-search-input") do %>
-          <%= submit_tag("Search") %>
-          <%= text_field_tag(:q) %>
-        <% end %>
-      </div>
+        <div id="search_box" class="form-group">
+          <%= form_tag("/products", method: "get") do %>
+            <%= text_field_tag :q, nil, class:"text-field" %>
+            <%= button_tag nil, type: "submit", class:"submit" do %>
+            <span class="glyphicon glyphicon-search"></span>
+            <% end %>
+          <% end %>
+        </div>
       <%= link_to 'Home', root_path %>
       <%= link_to 'Products', products_path %>
       <%= link_to 'Featured', featured_path %>

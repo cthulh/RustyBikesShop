@@ -1,13 +1,13 @@
 #search_box {
     display: inline-block;
     margin-right: 2em;
-    input[type="text"] {
+    .text-field {
         border: solid 1px #E4E4E4;
         border-radius: 6px;
         padding: 0.1em 0.2em;
         font-size: 1.5em;
     }
-    input[type="submit"] {
+    .submit {
         margin: 2px 0 0 0;
         background: none;
         box-shadow: none;
