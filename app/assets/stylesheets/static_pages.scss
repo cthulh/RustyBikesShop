@@ -10,6 +10,7 @@ $highlight: #8bc6db;
 * {
 	box-sizing: border-box;
 	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -111,6 +112,12 @@ footer {
 			background-color: white;
 			margin-top: 2em;
 			margin-left: 1em;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	body {
+		font-size: 75%;
 	}
 }
 
