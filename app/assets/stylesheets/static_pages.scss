@@ -1,5 +1,6 @@
 @import 'normalize';
 @import 'search_box';
+@import 'email_template';
 
 $light_gray: #74768c;
 $dark_gray: #49495e;
@@ -142,6 +143,8 @@ footer {
 		font-size: 1.5em;
 		font-weigh: 900;
 	}
+	background-color: #7F7FFF;
+	border-radius: 5px;
 }
 
 .thank-you {
