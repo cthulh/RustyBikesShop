@@ -144,6 +144,19 @@ footer {
 	}
 }
 
+.thank-you {
+	padding: 5em;
+	text-align: center;
+	font-weight: 700;
+	color: green;
+	.panel {
+		padding: 3em;
+	}
+	.panel p {
+		font-size: 1.8em;
+	}
+}
+
 @media only screen and (max-width: 768px) {
 	body {
 		font-size: 75%;
