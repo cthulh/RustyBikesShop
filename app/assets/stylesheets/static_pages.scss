@@ -136,6 +136,14 @@ footer {
 	}
 }
 
+.contact-form {
+	padding: 1em 0 2em 0;
+	label {
+		font-size: 1.5em;
+		font-weigh: 900;
+	}
+}
+
 @media only screen and (max-width: 768px) {
 	body {
 		font-size: 75%;
