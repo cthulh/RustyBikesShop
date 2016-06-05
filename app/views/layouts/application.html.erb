@@ -48,6 +48,8 @@
   <% if !current_page?(root_path) %>
     <p class="previous_page"><%= link_to "Previous page", request.referer.present? ? request.referer : root_path  %></p>
   <% end %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 		<%= yield %>
     <div class="push"></div>
 </div> <!-- /wrapper -->
