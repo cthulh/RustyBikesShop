@@ -1,10 +1,11 @@
-<table>
-  <tbody>
-    <tr>
-      <td><p>You have received a new contact form message. The contents of the message are:</p></td>
-    </tr>
-    <tr>
-      <td><p><%= @message %></p></td>
-    </tr>
-  </tbody>
-</table>
+<div class="email-container">
+	<h1>Email notification</h1>
+	<h4>You have received a new massage from the contact form on Rusty Bikes website.</h4>
+	<div class="message-content">
+		<h4>Message from: <%= @name %></h4>
+		<p><%= @message %></p>
+	</div>
+	<div class="footer">
+		<p>&copy; Rusty Bikes 2016</p>
+	</div>
+</div>
