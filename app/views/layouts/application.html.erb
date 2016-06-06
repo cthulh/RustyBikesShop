@@ -16,6 +16,15 @@
 <div class="wrapper">
   <header id="main-navigation" class="clearfix">
     <%= link_to 'Rusty Bikes', root_path, class: 'name' %>
+    <div class="login">
+      <% if user_signed_in? %>
+        <%= link_to 'logout', logout_path %>  |  
+        <%= current_user.email %>
+      <% else %>
+        <%= link_to 'login', login_path %>  |  
+        <%= link_to 'register', sign_up_path %>
+      <% end %>
+    </div>
     <nav>
         <div id="search_box" class="form-group">
           <%= form_tag("/products", method: "get") do %>

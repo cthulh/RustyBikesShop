@@ -23,7 +23,7 @@ html, body {
 }
 
 #main-navigation {
-	padding: 2.5em 5%;
+	padding: 2.5em 5% 1em 5%;
 	border-bottom: 1px solid $border;
 	.name, .name:hover, .name:active, .name:visited {
 		font-weight: 700;
@@ -134,16 +134,6 @@ footer {
 			margin-top: 2em;
 			margin-left: 1em;
 	}
-}
-
-.contact-form {
-	padding: 1em 0 2em 0;
-	label {
-		font-size: 1.5em;
-		font-weigh: 900;
-	}
-	background-color: #7F7FFF;
-	border-radius: 5px;
 }
 
 .thank-you {

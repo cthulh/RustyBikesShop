@@ -1,0 +1,15 @@
+.login {
+	position: absolute;
+	top: 1%;
+	right: 5%;
+	letter-spacing: 0.2em;
+	a, a:hover, a:active {
+		text-decoration: none;
+		highlight: none;
+		color: grey;
+	}
+	a:hover {
+		color: black;
+	}
+}
+
