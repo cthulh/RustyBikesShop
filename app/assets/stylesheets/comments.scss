@@ -6,4 +6,19 @@
 	label {
 		font-size: 1.5em;
 	}
+	.product-reviews {
+		padding-left: 1.5em;
+		h4 {
+			padding: 2em 0;
+		}
+		.row {
+			border: solid lightgrey 1px;
+			border-radius: 1em;
+			padding: 1em;
+			.comment_body {
+				margin-top: 2.5em;
+				text-align: left;
+			}
+		}
+	}
 }

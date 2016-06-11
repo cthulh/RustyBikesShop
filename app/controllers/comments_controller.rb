@@ -8,6 +8,10 @@ class CommentsController < ApplicationController
 		redirect_to product_path(@product)
 	end
 
+	def show
+  		
+	end
+
 	def destroy
 		
 	end
