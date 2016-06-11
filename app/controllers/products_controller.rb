@@ -73,6 +73,11 @@ class ProductsController < ApplicationController
     end
   end
 
+  # Calculating an average rating for a product for the #show
+  def average_rating
+    comments.average(:rating).to_f
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
