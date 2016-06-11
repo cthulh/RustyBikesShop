@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
   resources :users
   resources :products
   resources :orders, only: [:index, :show, :create, :destroy]
@@ -12,14 +12,8 @@ Rails.application.routes.draw do
 
   as :user do
   	get 'login' => 'devise/sessions#new'
-  end
-
-  as :user do
-  	get 'logout' => 'devise/sessions#destroy'
-  end
-
-  as :user do
-  	get 'sign_up' => 'devise/registrations#new'
+    get 'logout' => 'devise/sessions#destroy'
+    get 'sign_up' => 'devise/registrations#new'
   end
 
 end
