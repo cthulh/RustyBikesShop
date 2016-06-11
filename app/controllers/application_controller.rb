@@ -9,6 +9,9 @@ class ApplicationController < ActionController::Base
     redirect_to request.referer || root_path, :alert => exception.message
   end
 
+  # Pagination global default
+  WillPaginate.per_page = 3
+
   protected
 
   def configure_permitted_parameters

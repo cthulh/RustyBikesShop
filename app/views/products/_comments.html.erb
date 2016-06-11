@@ -8,4 +8,5 @@
 		<p class="comment_body"><%= comment.body %></p>
 	</div>
 	<% end %>
+	<%= will_paginate @comments, class: "pagination" %>
 </div>
