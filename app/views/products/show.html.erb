@@ -19,7 +19,9 @@
 				  	<strong>Average Rating: </strong><div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 				</div>
 				<div class="col-xs-12 bottom-buttons">
-					<%= link_to 'Edit', edit_product_path(@product) , class: 'btn btn-success right-space-2'  %> 
+					<% if signed_in? && current_user.admin? %>
+						<%= link_to 'Edit', edit_product_path(@product) , class: 'btn btn-success right-space-2'  %> 
+					<% end %>
 					<%= link_to 'Back', products_path , class: 'btn btn-default right-space-2'  %>
 				</div>
 				<div class="col-xs-12 comments">

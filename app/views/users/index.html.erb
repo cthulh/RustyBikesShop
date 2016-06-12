@@ -2,7 +2,8 @@
   <div class="row">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
       <div class="form">
-        <h1>Listing Users</h1>
+        <h1>Registered Users</h1>
+        <%= link_to 'Add User', new_user_path, class: "btn btn-primary" %>
           <% @users.each do |user| %>
             <div class="user">
               <p><strong>First Name: </strong>
@@ -12,11 +13,16 @@
               <strong>Email address: </strong>
               <%= user.email %><br>
               <strong>Password: </strong>
-              <%= user.password %><br>
-              <strong>Role: </strong>
-              <%= user.role %></p>
-              <%= link_to 'Show', user %> | 
-              <%= link_to 'Edit', edit_user_path(user) %> | 
+              <%= "*"*15 %><br>
+              <strong>Access level: </strong>
+              <% if user.admin %>
+                <%= "Admin" %>
+              <% else %>
+                <%= "Customer" %>
+              <% end %>
+              </p>
+              <%= link_to 'Show', user %>  
+              <%= link_to 'Edit', edit_user_path(user) %>  
               <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
             </div>
           <% end %>
@@ -24,4 +30,4 @@
     </div>
   </div>
 </div>
-<%= link_to 'New User', new_user_path %>
+

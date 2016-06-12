@@ -1,5 +1,5 @@
 .form {
-	padding: 1em 1.5em 2em 1.5em;
+	padding: 1em 1.5em 2em 2.5em;
 	label {
 		font-size: 1.5em;
 		font-weigh: 900;
@@ -8,6 +8,12 @@
 	border-radius: 5px;
 	a {
 		font-size: 1.5em;
-		font-weight: 600;
+		font-weight: 500;
+		colour: white;
+	}
+	a.btn {
+		position: absolute;
+		top: 5%;
+		right: 10%;
 	}
 }
