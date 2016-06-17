@@ -1,12 +1,16 @@
 class UserMailer < ApplicationMailer
 
-	default from: "tryglavson@hotmail.co.uk"
-
 	def contact_form(email, name, message)
 		@message = message
 		@name = name
-		mail(from: email,
-			to: "tryglavson@hotmail.co.uk",
+		mail(to: "tryglavson@hotmail.co.uk",
 			subject: "A new contact form message from #{@name}")
 	end
+
+	def welcome(user)
+		@appname = 'Rusty Bikes'
+		mail(to: user.email,
+			subject: "#{user.first_name}, welcome to #{@appname}!")
+	end
+
 end
