@@ -153,6 +153,15 @@ footer {
 	body {
 		font-size: 75%;
 	}
+
+	#main-navigation {
+		padding: 1.5em 1% 0.5em 1%;
+		.name, .name:hover, .name:active, .name:visited {
+			font-size: 0.8em;
+			letter-spacing: 3px;
+			padding: 0.5em;
+		}
+	}
 }
 
 
