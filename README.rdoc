@@ -1,6 +1,7 @@
 == Rusty Bikes
 === (a Rails ecommerce shop)
 This is a project built as part of the Career Foundry WebDev course
+Link: https://rustybikes.herokuapp.com/
 
 ==Feature List
 
