@@ -24,6 +24,7 @@ class CommentsController < ApplicationController
   	product = @comment.product
   	@comment.destroy
   	redirect_to product
+  	autorize! :destroy, @comment
 	end
 
 

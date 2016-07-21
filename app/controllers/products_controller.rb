@@ -1,7 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, except: [:show, :index]
-  load_and_authorize_resource
   
   # GET /products
   # GET /products.json
@@ -27,10 +26,12 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
+    authorize! :new, @product
   end
 
   # GET /products/1/edit
   def edit
+    authorize! :edit, @product
   end
 
   # POST /products
@@ -47,6 +48,7 @@ class ProductsController < ApplicationController
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :create, @product
   end
 
   # PATCH/PUT /products/1
@@ -61,6 +63,7 @@ class ProductsController < ApplicationController
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :update, @product
   end
 
   # DELETE /products/1
@@ -71,6 +74,7 @@ class ProductsController < ApplicationController
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
     end
+    authorize! :destroy, @product
   end
 
   private

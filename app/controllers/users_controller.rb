@@ -2,23 +2,25 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   #before_filter :authenticate_user!, only: [:edit, :destroy, :update]
   before_filter :authenticate_user!
-  load_and_authorize_resource
 
   # GET /users
   # GET /users.json
   def index
     @users = User.all
+    authorize! :index, @user
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
     redirect_to login_path if !signed_in?
+    authorize! :show, @user
   end
 
   # GET /users/new
   def new
     @user = User.new
+    authorize! :new, @user
   end
 
   # GET /users/1/edit
@@ -38,6 +40,7 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :create, @user
   end
 
   # PATCH/PUT /users/1
@@ -52,6 +55,7 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
+    authorize! :update, @user
   end
 
   # DELETE /users/1
@@ -62,6 +66,7 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
+    authorize! :destroy, @user
   end
 
   private
