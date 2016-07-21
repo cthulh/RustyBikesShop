@@ -4,14 +4,16 @@ class Ability
   def initialize(user)
     user ||= User.new
     if user.admin?
+      # admin can edit everything
     	can :manage, :all
     else
-    	can :read, :all
-	    can :manage, User do |edit_user|
-	    	edit_user == user
-	    end
+      # all users can view products and comments
+      can :read, Product
+      can :read, Comment
+      # user can edit their own details, orders, comments
+	    can :manage, User, id: user.id 
 	    can :manage, Order, id: user.id
-			can :read, Product
+      can :manage, Comment, id: user.id
     end
   end
 end
