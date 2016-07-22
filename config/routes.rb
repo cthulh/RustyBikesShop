@@ -7,11 +7,13 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :orders, only: [:index, :show, :create, :destroy]
+  resources :payments
 
   get 'about' => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
   post 'thank_you' => 'static_pages#thank_you'
   get 'featured' => 'static_pages#landing_page'
+
   root 'static_pages#index'
 
   as :user do
