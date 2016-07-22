@@ -17,7 +17,7 @@ describe UsersController, type: :controller do
 				sign_in user
 			end
 
-			it ", loads correct user details" do
+			it "loads correct user details" do
 
 				get :show, id: user.id
 				expect(response).to be_success
@@ -26,7 +26,7 @@ describe UsersController, type: :controller do
 
 			end
 
-			it ", loads details of another user (for a nonadmin)" do
+			it "loads details of another user (for a nonadmin)" do
 
 				get :show, id: another_user.id
 				expect(response).to redirect_to(root_path)
@@ -41,7 +41,7 @@ describe UsersController, type: :controller do
 				sign_in admin_user
 			end
 
-			it ", loads details of another user (for an admin)" do
+			it "loads details of another user (for an admin)" do
 
 				get :show, id: user.id
 				expect(response).to be_success
