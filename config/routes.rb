@@ -7,8 +7,8 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :orders, only: [:index, :show, :create, :destroy]
-  resources :payments
 
+  post 'payments/create' => 'payments#create'
   get 'about' => 'static_pages#about'
   get 'contact' => 'static_pages#contact'
   post 'thank_you' => 'static_pages#thank_you'
