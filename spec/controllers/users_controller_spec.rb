@@ -3,9 +3,12 @@ require 'rails_helper'
 
 describe UsersController, type: :controller do
 	
-	let(:user) {User.create!(first_name: "john", last_name: "john", email: "jojo@jojo.jo", password: "jojojo666")}
-	let(:another_user) {User.create!(first_name: "anotherjohn", last_name: "anotherjohn", email: "anotherjojo@jojo.jo", password: "jojojo666")}
-	let(:admin_user) {User.create!(first_name: "adminjohn", last_name: "adminjohn", email: "adminjojo@jojo.jo", password: "jojojo666", admin: "true")}
+	#let(:user) {User.create!(first_name: "john", last_name: "john", email: "jojo@jojo.jo", password: "jojojo666")}
+	user = FactoryGirl.create(:user)
+	#let(:another_user) {User.create!(first_name: "anotherjohn", last_name: "anotherjohn", email: "anotherjojo@jojo.jo", password: "jojojo666")}
+	another_user = FactoryGirl.create(:another_user)
+	#let(:admin_user) {User.create!(first_name: "adminjohn", last_name: "adminjohn", email: "adminjojo@jojo.jo", password: "jojojo666", admin: "true")}
+	admin_user = FactoryGirl.create(:admin_user)
 
 	describe "GET #show" do
 

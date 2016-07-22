@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.2.1"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -37,12 +37,14 @@ gem 'devise'
 gem 'cancancan'
 gem 'will_paginate', '~> 3.1.0'
 
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'sqlite3'
   gem 'better_errors'
   gem 'rspec-rails', '~> 3.4'
+  gem "factory_girl_rails", "~> 4.0"
 end
 
 group :development do
