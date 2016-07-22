@@ -17,6 +17,9 @@
 				  	<strong>Price:</strong> £<%= @product.price %>
 				  	<br><br>
 				  	<strong>Average Rating: </strong><div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+				  	<%= form_tag "/payments/create" do %>
+						  <%= render partial: "shared/stripe_checkout_button" %>
+						<% end %>
 				</div>
 				<div class="col-xs-12 bottom-buttons">
 					<% if signed_in? && current_user.admin? %>
