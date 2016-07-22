@@ -9,11 +9,11 @@ class Ability
     else
       # all users can view products and comments
       can :read, Product
-      can :read, Comment
+      can [:read, :create], Comment
       # user can edit their own details, orders, comments
 	    can :manage, User, id: user.id 
 	    can :manage, Order, id: user.id
-      can :manage, Comment, id: user.id
+      can [:edit, :destroy], Comment, id: user.id
     end
   end
 end
