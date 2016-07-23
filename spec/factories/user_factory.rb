@@ -1,6 +1,7 @@
 FactoryGirl.define do
 
-	sequence(:email) { |n| "#{n}user000@domain.com" }
+	#generate email addresses
+	sequence(:email) { |n| "#{n}user@domain.com" }
 
 	factory :user do
 			
@@ -10,12 +11,14 @@ FactoryGirl.define do
 	  admin false
 	  email 
 
+	  #another user with a different email address
 	  factory :another_user, class: User do
 
 			email
 
 		end
 
+		#admin user with different email address and admin set to true
 		factory :admin_user, class: User do
 
 			admin true
