@@ -16,6 +16,7 @@ class PaymentsController < ApplicationController
 	    )
 
 	    if charge.paid
+	    	<% logger.debug "Charge is paid successfully"%>
 	    	Order.create(user_id: @user.id, product_id: @product.id, total: @product.price)
 	    end
 
