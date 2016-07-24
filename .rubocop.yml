@@ -1,0 +1,13 @@
+Metrics/LineLength:
+  Max: 99
+Documentation:
+    Enabled: false
+AllCops:
+  Excludes:
+    - db/*
+    - db/migrate/*
+    - config/*
+    - config/initializers/*
+    - config/environments/*
+    - bin/*
+    - Guardfile

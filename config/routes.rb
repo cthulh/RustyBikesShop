@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   root 'static_pages#index'
 
   as :user do
-  	get 'login' => 'devise/sessions#new'
+    get 'login' => 'devise/sessions#new'
     get 'logout' => 'devise/sessions#destroy'
     get 'sign_up' => 'devise/registrations#new'
   end
